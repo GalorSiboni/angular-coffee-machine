@@ -1,23 +1,11 @@
 <form *ngIf="showAddOrder" class="add-form" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <label for="costumer_name">Costumer Name</label>
-    <input
-      type="text"
-      name="costumer_name"
-      [(ngModel)]="costumer_name"
-      id="costumer_name"
-      placeholder="Add Order"
-    />
+    <input type="text" name="costumer_name" [(ngModel)]="costumer_name" id="costumer_name" placeholder="Add Order" />
   </div>
   <div class="form-control">
     <label for="description">Description</label>
-    <input
-      type="text"
-      name="description"
-      [(ngModel)]="description"
-      id="description"
-      placeholder="Regular Coffee"
-    />
+    <input type="text" name="description" [(ngModel)]="description" id="description" placeholder="Regular Coffee" />
   </div>
   <div class="form-control">
     <label for="description">Price</label>
@@ -26,12 +14,7 @@
   </div>
   <div class="form-control form-control-check">
     <label for="is_boss">You the boss?</label>
-    <input
-      type="checkbox"
-      name="is_boss"
-      [(ngModel)]="is_boss"
-      id="is_boss"
-    />
+    <input type="checkbox" name="is_boss" [(ngModel)]="is_boss" id="is_boss" />
   </div>
   <input type="submit" value="Save Order" class="btn btn-block" />
 </form>

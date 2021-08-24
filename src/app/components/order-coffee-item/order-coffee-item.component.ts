@@ -8,16 +8,16 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./order-coffee-item.component.css']
 })
 export class OrderCoffeeItemComponent implements OnInit {
-  @Input() order: Order;
+  @Input() order!: Order;
   @Output() onDeleteTask: EventEmitter<Order> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<Order> = new EventEmitter();
   faTimes = faTimes;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  onDelete(order) {
+  onDelete(order: any) {
     this.onDeleteTask.emit(order);
   }
 }

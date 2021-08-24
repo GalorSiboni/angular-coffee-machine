@@ -10,11 +10,12 @@ import { Order } from '../../Order';
 })
 export class AddOrderComponent implements OnInit {
   @Output() onAddOrder: EventEmitter<Order> = new EventEmitter();
-  costumer_name: string | undefined;
-  description: string | undefined;
+  costumer_name: string = 'FirstName SecondName';
+  description: string = 'Regular Coffee';
   is_boss: boolean = false;
-  price: number | undefined;
+  price: number = 9.99;
   subscription: Subscription;
+  showAddOrder: boolean = false;
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService
@@ -22,7 +23,7 @@ export class AddOrderComponent implements OnInit {
       .subscribe((value) => (this.showAddOrder = value));
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnDestroy() {
     // Unsubscribe to ensure no memory leaks

@@ -1,5 +1,2 @@
-<app-add-order (onAddTask)="addOrder($event)"></app-add-order>
-<app-order-coffee-item
-  *ngFor="let order of orders"
-  [order]="order"
-></app-order-coffee-item>
+<app-add-order (onAddOrder)="addOrder($event)"></app-add-order>
+<app-order-coffee-item *ngFor="let order of orders" [order]="order"></app-order-coffee-item>

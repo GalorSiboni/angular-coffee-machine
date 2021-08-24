@@ -1,13 +1,7 @@
-<div
-  class="order"
->
+<div class="order">
   <h3>
     {{ order.customer_name }}
-    <fa-icon
-      (click)="onDelete(order)"
-      [ngStyle]="{ color: 'red' }"
-      [icon]="faTimes"
-    ></fa-icon>
+    <fa-icon (click)="onDelete(order)" [ngStyle]="{ color: 'red' }" [icon]="faTimes"></fa-icon>
   </h3>
   <p>{{ order.description }}</p>
   <p>{{ order.price }}</p>
